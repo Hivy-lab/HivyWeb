@@ -38,7 +38,7 @@ function createWeather(current){
     let tempCCell = document.createElement("td")
     let localTCell = document.createElement("td")
 
-    is_DayCell.innerHTML = current.current.is_da
+    is_DayCell.innerHTML = current.current.is_day
     nameCell.innerHTML = current.location.name
     regionCell.innerHTML = current.location.region
     countryCell.innerHTML = current.location.country
