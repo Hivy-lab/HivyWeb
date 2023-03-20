@@ -11512,8 +11512,15 @@ html {
 {
   border: 2px solid black;
 }
-th
+.th
 {
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+.weather{
+  
+}
+td{
   text-align: center;
   padding: 10px 10px 10px 10px;
 }

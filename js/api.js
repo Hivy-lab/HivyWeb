@@ -1,5 +1,6 @@
 const apikey = 'o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT';
-const url = 'https://api.nasa.gov/planetary/apod?api_key=' + apikey;
+const URL = 'https://api.nasa.gov/planetary/apod?api_key=' + apikey;
+const weatUrl='https://api.weatherapi.com/v1/current.json?key=2814de38563e48db84c152715232003&q=Portugal&aqi=no';
 
 function get_Url(url){
     let request = new XMLHttpRequest()
@@ -9,7 +10,6 @@ function get_Url(url){
 }
 
 function createRow(planetary){
-    console.log(planetary)
     let row = document.createElement("tr")
     let explanationCell = document.createElement("td")
     let titleCell = document.createElement("td")
@@ -27,13 +27,61 @@ function createRow(planetary){
     return row
 }
 
+function createWeather(current){
+    let row = document.createElement("tr")
+    let is_DayCell = document.createElement("td")
+    let nameCell = document.createElement("td")
+    let regionCell = document.createElement("td")
+    let countryCell = document.createElement("td")
+    let latCell = document.createElement("td")
+    let lonCell = document.createElement("td")
+    let tempCCell = document.createElement("td")
+    let localTCell = document.createElement("td")
+
+    is_DayCell.innerHTML = current.current.is_day
+    nameCell.innerHTML = current.location.name
+    regionCell.innerHTML = current.location.region
+    countryCell.innerHTML = current.location.country
+    latCell.innerHTML = current.location.lat
+    lonCell.innerHTML = current.location.lon
+    tempCCell.innerHTML = current.current.temp_c
+    localTCell.innerHTML = current.location.localtime
+
+    row.appendChild(is_DayCell)
+    row.appendChild(nameCell)
+    row.appendChild(regionCell)
+    row.appendChild(countryCell)
+    row.appendChild(latCell)
+    row.appendChild(lonCell)
+    row.appendChild(tempCCell)
+    row.appendChild(localTCell)
+
+    return row
+}
+
 function main(){
-    let data = get_Url(url)
+    let data = get_Url(URL)
     let planetary = JSON.parse(data)
     let table = document.getElementById("tabela")
     
     let row = createRow(planetary)
     table.appendChild(row)
+    
 }
 
+function weatMain()
+{
+    let data = get_Url(weatUrl)
+    let location = JSON.parse(data)
+    let table = document.getElementById("weatherId")
+    
+    let row =  createWeather(location)
+    table.appendChild(row)
+    
+}
+
+
+
+
 main()
+weatMain()

@@ -31,7 +31,8 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Apis">Apis</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#NasaApi">NasaApi</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#WeatherApi">WeatherApi</a></li>
                     </ul>
                 </div>
             </div>
@@ -220,10 +221,10 @@
             </div>
         </section>
 
-        <section class="page-section" id="Apis">
+        <section class="page-section" id="NasaApi" align="center">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Apis</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">NasaApi</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -233,7 +234,7 @@
                 <div>
                     <table id="tabela" class="NasClass">
                             <thead>
-                                <tr>
+                                <tr class="th">
                                     <th>Title</th>
                                     
                                     <th>Explanation</th>
@@ -244,6 +245,35 @@
                             </thead>
                             <tbody>
                             </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="WeatherApi">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">WeatherApi</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div>
+                    <table id="weatherId" class="weather" align="center">
+                        <thead class="weather">
+                            <tr class="th">
+                                <th>Is Day</th>
+                                <th>name</th>
+                                <th>region</th>
+                                <th>country</th>
+                                <th>lat</th>
+                                <th>lon</th>
+                                <th>Temperatura C</th>
+                                <th>localtime</th>
+                            </tr>
+                        </thead>
                     </table>
                 </div>
             </div>
