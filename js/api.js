@@ -1,6 +1,7 @@
 const apikey = 'o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT';
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=' + apikey;
 const weatUrl='https://api.weatherapi.com/v1/current.json?key=2814de38563e48db84c152715232003&q=Portugal&aqi=no';
+const GAMEURL = 'https://www.freetogame.com/api/games'
 
 function get_Url(url){
     let request = new XMLHttpRequest()
