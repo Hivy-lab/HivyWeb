@@ -1,24 +1,39 @@
-apikey='o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT'
+const apikey = 'o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT';
+const url = 'https://api.nasa.gov/planetary/apod?api_key=' + apikey;
 
 function get_Url(url){
     let request = new XMLHttpRequest()
-    request.open("Get",url,false)
+    request.open("get",url,false)
     request.send()
     return request.responseText
-    //o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT
 }
 
-function creatLigne(planetary){
+function createRow(planetary){
+    console.log(planetary)
+    let row = document.createElement("tr")
+    let explanationCell = document.createElement("td")
+    let titleCell = document.createElement("td")
+    let urlCell = document.createElement("td")
+    titleCell.innerHTML = planetary.title
+    explanationCell.innerHTML = planetary.explanation
+    urlCell.innerHTML = planetary.url
+    
 
+    row.appendChild(titleCell)
+    row.appendChild(explanationCell)
+    row.appendChild(urlCell)
+    
+
+    return row
 }
 
 function main(){
-    data = get_Url('https://api.nasa.gov/planetary/apod?api_key='+apikey)
-    planetary = JSON.parse(data)
+    let data = get_Url(url)
+    let planetary = JSON.parse(data)
+    let table = document.getElementById("tabela")
     
-    planetary.forEach(element => {
-        let ligne = creatLigne(element)
-    });
+    let row = createRow(planetary)
+    table.appendChild(row)
 }
 
 main()
