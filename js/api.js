@@ -13,15 +13,15 @@ function createRow(planetary){
     let row = document.createElement("tr")
     let explanationCell = document.createElement("td")
     let titleCell = document.createElement("td")
-    let urlCell = document.createElement("td")
+    let dateCell = document.createElement("td")
     titleCell.innerHTML = planetary.title
     explanationCell.innerHTML = planetary.explanation
-    urlCell.innerHTML = planetary.url
+    dateCell.innerHTML = planetary.date
     
 
     row.appendChild(titleCell)
     row.appendChild(explanationCell)
-    row.appendChild(urlCell)
+    row.appendChild(dateCell)
     
 
     return row

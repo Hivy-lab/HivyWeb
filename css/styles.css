@@ -11507,3 +11507,13 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.NasClass 
+{
+  border: 2px solid black;
+}
+th
+{
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
