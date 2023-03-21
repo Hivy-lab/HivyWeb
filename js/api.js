@@ -112,4 +112,3 @@ Promise.all(pokemonPromises)
 
 main()
 weatMain()
-fetchWeather()
