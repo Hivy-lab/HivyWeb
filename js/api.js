@@ -5,13 +5,13 @@ const getPokeUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
 const generatePokemonPromises = () => Array(150).fill().map((_,index)=>
         fetch(getPokeUrl(index + 1)).then(response=> response.json()));
 
-const generateHTML = pokemons => pokemons.reduce((accumulator, { name, id, type}) =>{
+const generateHTML = pokemons => pokemons.reduce((accumulator, pokemon) =>{
     const elementTypes = pokemon.types.map(typeInfo => typeInfo.type.name)
     
     accumulator += `
         <li class="card ${elementTypes[0]}">
-        <img class = "card-image" alt="${name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png" width="100" height="100"/>
-            <h2 class="card-title">${id}. ${name}</h2>
+        <img class = "card-image" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" width="100" height="100"/>
+            <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
             <p class="card-subtitle">${elementTypes.join(' | ')}</p>
         </li>
     `

@@ -11512,14 +11512,35 @@ html {
 {
   border: 2px solid black;
 }
+
 .th
 {
   text-align: center;
   padding: 10px 10px 10px 10px;
 }
-.weather{
+.pokedex li{
   
+  border: 1px solid black;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 100%;
+  display: inline-block;
 }
+
+.weather{
+  border: 1px solid black;
+}
+
+.weather td{
+  border: 1px solid black;
+  padding-right: 60px;
+  text-align: center;
+  align-items: center;
+}
+
 td{
   text-align: center;
   padding: 10px 10px 10px 10px;
