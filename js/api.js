@@ -1,7 +1,29 @@
 const apikey = 'o3brnQ5WWiWQtdASLrkRZYq0qRqCImkSfpTJf6hT';
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=' + apikey;
 const weatUrl='https://api.weatherapi.com/v1/current.json?key=2814de38563e48db84c152715232003&q=Portugal&aqi=no';
-const GAMEURL = 'https://www.freetogame.com/api/games'
+const getPokeUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
+const generatePokemonPromises = () => Array(150).fill().map((_,index)=>
+        fetch(getPokeUrl(index + 1)).then(response=> response.json()));
+
+const generateHTML = pokemons => pokemons.reduce((accumulator, { name, id, type}) =>{
+    const elementTypes = pokemon.types.map(typeInfo => typeInfo.type.name)
+    
+    accumulator += `
+        <li class="card ${elementTypes[0]}">
+        <img class = "card-image" alt="${name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png" width="100" height="100"/>
+            <h2 class="card-title">${id}. ${name}</h2>
+            <p class="card-subtitle">${elementTypes.join(' | ')}</p>
+        </li>
+    `
+    return accumulator
+},'')
+
+
+const insertPokemonIntoPage = pokemons =>{
+    const ul = document.querySelector('[data-js="pokedex"]')
+    ul.innerHTML = pokemons
+}
+const pokemonPromises = generatePokemonPromises()
 
 function get_Url(url){
     let request = new XMLHttpRequest()
@@ -80,6 +102,16 @@ function weatMain()
     table.appendChild(row)
     
 }
+
+
+
+
+
+
+Promise.all(pokemonPromises)
+    .then(generateHTML)
+    .then(insertPokemonIntoPage)
+
 
 
 
