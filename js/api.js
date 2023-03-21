@@ -20,7 +20,6 @@ const generateHTML = pokemons => pokemons.reduce((accumulator, pokemon) =>{
     return accumulator
 },'')
 
-
 const insertPokemonIntoPage = pokemons =>{
     const ul = document.querySelector('[data-js="pokedex"]')
     ul.innerHTML = pokemons
@@ -104,7 +103,6 @@ function weatMain()
     table.appendChild(row)
     
 }
-
 
 Promise.all(pokemonPromises)
     .then(generateHTML)
