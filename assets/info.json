@@ -1,0 +1,25 @@
+{
+    "PokeApi": "https://pokeapi.co",
+    "NasaAPi":"https://api.nasa.gov/planetary/",
+    "WeatherApi":"https://api.weatherapi.com/v1/current.json?",
+    "Bootstrap5" : "https://startbootstrap.com/theme/freelancer",
+    
+    "WebsiteSearch":
+    {
+
+        "Html":"https://www.w3schools.com/html",
+        "Css":"https://www.w3schools.com/css",
+        "Javascript":"https://www.w3schools.com/js",
+        "Php":"https://www.w3schools.com/php"
+
+    },
+
+    "Images":
+    {
+
+        "Pokeball":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpokemon.fandom.com%2Fwiki%2FPok%25C3%25A9_Ball&psig=AOvVaw0ccBiOoswSCdiOubXla7pN&ust=1679498345085000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOibupKp7f0CFQAAAAAdAAAAABAM",
+        "SpritesPokemon":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
+
+    }
+
+}
