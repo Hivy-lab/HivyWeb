@@ -39,6 +39,7 @@
     --bs-dark-rgb: 33, 37, 41;
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
+    --bs-green-rgb: 44, 164, 34;
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
     --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -63,9 +64,9 @@ body {
     background-color: var(--bs-body-bg);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
+}
 
-.pokedetails{
+.pokedetails {
     width: 100%;
     background-image: url("/assets/img/Pok\ _Ball.webp");
     background-repeat: no-repeat;
@@ -73,16 +74,16 @@ body {
     background-position-x: 450px;
 }
 
-h2{
+h2 {
     font-size: 4rem;
     text-align: center;
 }
 
-img{
+img {
     width: 25%;
 }
 
-p{
+p {
     margin-top: 0;
     margin-bottom: 1rem;
     border: 1px solid #212529;
@@ -90,7 +91,7 @@ p{
     width: 25%;
 }
 
-.hPoke{
+.hPoke {
     background: var(--bs-body-bg);
 }
 
@@ -110,7 +111,7 @@ p{
     transition: 500ms;
 }
 
-.abiPoke{
+.abiPoke {
     background: var(--bs-body-bg);
 }
 
@@ -121,62 +122,77 @@ p{
 }
 
 .steel {
-	background-color: #f4f4f4;
+    background-color: #f4f4f4;
 }
 
 .fire {
-	background-color: #FDDFDF;
+    background-color: #FDDFDF;
 }
 
 .grass {
-	background-color: #DEFDE0;
+    background-color: #DEFDE0;
 }
 
 .electric {
-	background-color: #FCF7DE;
+    background-color: #FCF7DE;
 }
 
-.water, .ice {
-	background-color: #DEF3FD;
+.water,
+.ice {
+    background-color: #DEF3FD;
 }
 
 .ground {
-	background-color: #f4e7da;
+    background-color: #f4e7da;
 }
 
 .rock {
-	background-color: #d5d5d4;
+    background-color: #d5d5d4;
 }
 
 .fairy {
-	background-color: #ffb7ec;
+    background-color: #ffb7ec;
 }
 
 .poison {
-	background-color: #98d7a5;
+    background-color: #98d7a5;
 }
 
 .bug {
-	background-color: #f8d5a3;
+    background-color: #f8d5a3;
 }
 
 .dragon {
-	background-color: #97b3e6;
+    background-color: #97b3e6;
 }
 
 .psychic {
-	background-color: #e564fc;
+    background-color: #e564fc;
 }
 
 .flying {
-	background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 .fighting {
-	background-color: #E6E0D4;
+    background-color: #E6E0D4;
 }
 
 .normal {
-	background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bs-green);
+    color: #fff;
+    cursor: pointer;
+}
+
+option {
+    background-color: var(--bs-green);
+    color: #fff;
+}

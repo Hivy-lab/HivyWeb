@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Pokemon Details</title>
     <link href="/css/PokeDetail.css" rel="stylesheet" />
+
 </head>
+
 <body>
+    <select class="page-select" id="page-select" onchange="redirectToPage()">
+        <option value="">Escolha</option>
+        <option value="/index.html">Menu</option>
+        <option value="/index.html#NasaApi">Apis</option>
+        
+    </select>
     <div class="pokedetails" id="pokemon-details" align="center"></div>
-    
+
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const pokemonId = urlParams.get('id');
@@ -29,6 +38,16 @@
                 document.getElementById('pokemon-details').innerHTML = pokemonDetails;
             })
             .catch(error => console.log(error));
+
+        function redirectToPage() {
+            const pageSelect = document.getElementById('page-select');
+            const selectedValue = pageSelect.options[pageSelect.selectedIndex].value;
+
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
     </script>
 </body>
+
 </html>
