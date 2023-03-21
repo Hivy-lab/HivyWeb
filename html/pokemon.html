@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Details</title>
+</head>
+<body>
+    <div id="pokemon-details"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pokemonId = urlParams.get('id');
+        const getPokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+
+        fetch(getPokemonUrl)
+            .then(response => response.json())
+            .then(pokemon => {
+                const elementTypes = pokemon.types.map(typeInfo => typeInfo.type.name);
+                const pokemonDetails = `
+                    <h2>${pokemon.name}</h2>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}" />
+                    <p>Type: ${elementTypes.join(' | ')}</p>
+                    <p>Height: ${pokemon.height}m</p>
+                    <p>Weight: ${pokemon.weight}kg</p>
+                `;
+                document.getElementById('pokemon-details').innerHTML = pokemonDetails;
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+</html>
