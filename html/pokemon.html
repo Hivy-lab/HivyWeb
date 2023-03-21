@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemon Details</title>
+    <link href="/css/PokeDetail.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="pokemon-details"></div>
-
+    <div class="pokedetails" id="pokemon-details" align="center"></div>
+    
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const pokemonId = urlParams.get('id');
@@ -16,12 +17,14 @@
             .then(response => response.json())
             .then(pokemon => {
                 const elementTypes = pokemon.types.map(typeInfo => typeInfo.type.name);
+                const elementAbilities = pokemon.abilities.map(abilityInfo => abilityInfo.ability.name);
                 const pokemonDetails = `
                     <h2>${pokemon.name}</h2>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}" />
-                    <p>Type: ${elementTypes.join(' | ')}</p>
-                    <p>Height: ${pokemon.height}m</p>
-                    <p>Weight: ${pokemon.weight}kg</p>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}" align="center"/>
+                    <p class="card ${elementTypes[0]}">Type: ${elementTypes.join(' | ')}</p>
+                    <p class="hPoke">Height: ${pokemon.height}m</p>
+                    <p class="wPoke">Weight: ${pokemon.weight}kg</p>
+                    <p class="abiPoke">Abilities: ${elementAbilities.join(' | ')}</p>
                 `;
                 document.getElementById('pokemon-details').innerHTML = pokemonDetails;
             })
