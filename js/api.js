@@ -106,13 +106,10 @@ function weatMain()
 }
 
 
-
-
-
-
 Promise.all(pokemonPromises)
     .then(generateHTML)
     .then(insertPokemonIntoPage)
 
 main()
 weatMain()
+fetchWeather()
