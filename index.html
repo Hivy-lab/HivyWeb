@@ -7,9 +7,13 @@
         <meta name="author" content="" />
         <title>ApIslande</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+
+        
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -21,7 +25,6 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <img src="/assets/favicon-32x32.png" alt="icon" class="logotype">
                 <a class="navbar-brand" href="#page-top">ApIslande</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -35,6 +38,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#NasaApi">NasaApi</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#WeatherApi">WeatherApi</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#PokeApi">PokeApi</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">terminar sessao</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,9 +47,10 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..."  />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">ApIslande</h1>
+                <a href="./html/MiniGame.html" class="EasterEgg">EasterEgg</a>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -140,14 +145,15 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">Um Website que vai voces disponibilizar varias apis e poder ver como ela funcionem</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Podes as usar para meter no teu website para poder melhora a expriencia dos teus visualizadores do website e com as informações todas sobre os websites que usei para me ajudar, onde se localiza a templete que foi usada para fazer este website</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Podes as usar para meter no teu website para poder melhora a expriencia dos teus visualizadores do website</p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="/assets/info.json">
+                    <a class="btn btn-xl btn-outline-light" href="/assets/api.json">
                         <i class="fas fa-download me-2"></i>
                         Link Apis
                     </a>
+                    <button id="firework-button"  class="EasterEgg button" >EasterEgg</button>
                 </div>
             </div>
         </section>
@@ -218,13 +224,14 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <a  href="./html/BattlePokemon.html">TestBattle</a>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="page-section" id="NasaApi" align="center">
+        <section class="page-section" id="NasaApi" >
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">NasaApi</h2>
@@ -264,9 +271,9 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <div>
-                    <table id="weatherId" class="weather" align="center">
+                    <table id="weatherId" class="weather">
                         <thead class="weather">
-                            <tr class="th" align="center">
+                            <tr class="th" >
                                 <th>Is Day</th>
                                 <th>name</th>
                                 <th>region</th>
@@ -334,6 +341,10 @@
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+            <button id="EasterEggCopy"  class="EasterEgg button copyright" >EasterEgg</button>
+            <audio id="myAudio">
+                <source src="./assets/img/combat04.mp3" type="audio/mp3">
+              </audio>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
@@ -528,12 +539,23 @@
                 </div>
             </div>
         </div>
+
+        
+
+        
+
+
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
+        <script src="js/Framework.js"></script>
         <script src="js/scripts.js"></script>
+        
         <script src="js/api.js"></script>
         
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     </body>
 </html>

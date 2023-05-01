@@ -1,0 +1,5 @@
+{
+    "PokeApi": "https://pokeapi.co",
+    "NasaAPi":"https://api.nasa.gov/planetary/",
+    "WeatherApi":"https://api.weatherapi.com/v1/current.json?"
+}

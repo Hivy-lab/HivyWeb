@@ -11651,7 +11651,6 @@ td{
 	margin-bottom: 0px;
 	font-size: 32px;
 	font-weight: normal;
-  color: #150f64;
 	position: relative;
 	z-index: 2;
 }
@@ -11686,6 +11685,41 @@ td{
 	}
 }
 
-.logotype{
-  margin-right: 15px;
+
+.EasterEgg{
+  font-size: 24px;
+}
+
+.EasterEgg.button{
+  border: none;
+  background-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+.EasterEgg.button:hover{
+  color: white;
+}
+
+.fireworksCanvas{
+  position: fixed; 
+
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: none;
+  display: block;
+  z-index: 5;
+}
+
+.EasterEgg.button.copyright{
+  font-size: 12px;
+  background: #1a252f;
+  color: #1a252f;
+}
+.EasterEgg.button.copyright:hover{
+  color: white;
+}
+
+i.fal.fa-egg{
+  color: white;
 }

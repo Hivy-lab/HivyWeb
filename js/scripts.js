@@ -1,5 +1,6 @@
 
 
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -45,3 +46,18 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+
+var audio = document.getElementById("myAudio");
+var button = document.getElementById("EasterEggCopy");
+
+button.addEventListener("click", function() {
+    var section = document.getElementById('PokeApi');
+    section.scrollIntoView({ behavior: 'smooth' });
+    
+    audio.volume = 0.3; 
+    audio.play();
+});
+
+
